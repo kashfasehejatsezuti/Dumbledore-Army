@@ -1,0 +1,81 @@
+{
+  "posts": [
+  {
+      "id": 1,
+      "name": "Severus Snape",
+      "house_name": "Slytherin",
+      "specialization": "Master"
+    },
+    {
+      "id": 2,
+      "name": "Harry Potter",
+      "house_name": "Gryffindor",
+      "specialization": "Leader"
+    },
+    {
+      "id": 3,
+      "name": "Albus Dumbledore",
+      "house_name": "Gryffindor",
+      "specialization": "Head master"
+    },
+    {
+      "id": 4,
+      "name": " Ronald Weasley",
+      "house_name": "Gryffindor",
+      "specialization": "Chess master"
+    },
+    {
+      "id": 5,
+      "name": "Hermione Granger",
+      "house_name": "Gryffindor",
+      "specialization": "Magician"
+    },
+    {
+      "id": 6,
+      "name": "Marcus Belby",
+      "house_name": "Ravenclaw",
+      "specialization": "Soldier"
+    },
+    {
+      "id": 7,
+      "name": "Horace Slughorn",
+      "house_name": "Slytherin",
+      "specialization": "Soldier"
+    }
+    
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  },
+  "sly_house": [
+    {
+      "id": 1,
+      "name": "Tom Riddle",
+      "house_name": "Slytherin",
+      "specialization": "Lord Voldemort"
+    },
+    {
+      "id": 2,
+      "name": "Lucius Malfoy",
+      "house_name": "Slytherin",
+      "specialization": "Magician"
+    }
+  ],
+  "huff_house": [
+    {
+      "id": 1,
+      "name": "Cedric Diggory",
+      "house_name": "Hufflepuff",
+      "specialization": "Trick master"
+    }
+  ],
+  "rav_house": [
+    {
+      "id": 1,
+      "name": "Luna Lovegood",
+      "house_name": "Ravenclaw",
+      "specialization": "Nature"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-lg-12">
+      <div class=" d-flex mb-3 mt-3">
+        <button type="button" class="btn  btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Ally</button>
+      </div>
+      </div>
+      </div>
+      
+         <!--Alert-->
+         <div *ngIf="alert1" class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>You Ally has been added successful.</strong> 
+          <button type="button"class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div *ngIf="alert2" class="alert alert-danger  alert-dismissible fade show" role="alert">
+          <strong>You Ally has been Deleted successful.</strong>
+          <button type="button" (click)="CloseAlert2()"class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div class="row col-md-12">
+          <div class="col-md-4 col-sm-6" *ngFor="let ally of alliesData">
+            <div class="card mt-3">
+  
+           <!--Condition-->
+  
+              <div *ngIf="ally.house_name== 'Slytherin'">
+                <img src="assets/img/img/sly.jpg"   class="img-fluid rounded " alt=""/> 
+              </div>
+              <div *ngIf="ally.house_name== 'Hufflepuff'">
+                <img src="assets/img/img/huff.jpg"   class="img-fluid rounded " alt=""/>
+              </div>
+              <div *ngIf="ally.house_name== 'Gryffindor'">
+                <img src="assets/img/img/gry.jpg"   class="img-fluid rounded " alt=""/>
+              </div>
+              <div *ngIf="ally.house_name== 'Ravenclaw'">
+                <img src="assets/img/img/rav.jpg"   class="img-fluid rounded " alt=""/>
+              </div>
+                  <div class="card-body col-md-12">
+                      <p class="card-text "> Name : {{ally.name}}</p>
+                      <p class="card-text "> House Name : {{ally.house_name}}</p>
+                      <p class="card-text">Specialization : {{ally.specialization}}</p>
+                      <button type="button" (click)="deleteAllAllies(ally)" class="btn btn-danger"  style="background-color: brown;">Remove</button>
+                 </div>
+           </div>
+         </div>
+        </div>
+     <!-- Modal -->
+     
+        <div class="row"> 
+          <div class="col col-sm-2">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Add Ally </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <form [formGroup]="formValue">
+                          <div class="form-group mb-3">
+                            <label for="ally_name" class="form-label">Ally Name</label>
+                            <input type="text"  class="form-control" id="ally_name" formControlName="name" required>                         
+                          </div>
+                          <div class="mb-3">
+                            <label for="house_name"  class="form-label"> House Name</label>
+                            <select class="form-select form-select-sm" formControlName="house_name" id="house_name" aria-label=".form-select-sm example" required>
+                              <option value="Gryffindor">Gryffindor</option>
+                              <option value="Slytherin">Slytherin</option>
+                              <option value="Hufflepuff">Hufflepuff</option>
+                              <option value="Ravenclaw">Ravenclaw</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                          <label for="specialization" class="form-label">Specialization</label>
+                          <input type="text"  class="form-control" id="specialization"  formControlName="specialization" required >
+                          </div>
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" id="cancle" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button"[disabled]="!formValue.valid" (click)="postAlliesDetails()"class="btn btn-primary">Add
+                    </button>
+                  </div>
+                </div>
+                </div>
+              </div>
+          </div>
+</div>
+
+   
+    
